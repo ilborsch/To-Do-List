@@ -22,7 +22,7 @@
          <p>On a Unix system, it's pip3 instead of pip.</p>
          <p>enter the command:</p>
             <p>  $ django-admin runserver</p>
-            <p>Or in directory - 'your_own_path/To_Do_List/to_do_list':</p>
+            <p>Or in directory - 'your_own_path/to_do_list':</p>
             <p>  $ python manage.py runserver</p>
          <p>if necessary, the application will be available on the network. Alternative - Install Waitress:</p>
             <p>$ pip install waitress</p>
