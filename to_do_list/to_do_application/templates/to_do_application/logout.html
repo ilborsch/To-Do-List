@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{ user.username }} profile {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+    {% include 'to_do_application/includes/nav_bar.html' %}
+<h1>User {{ user.username }} profile</h1>
+<h2>Go to the <a href="{% url 'main_page' %}">welcome page</a>.</h2>
+
+{% endblock %}

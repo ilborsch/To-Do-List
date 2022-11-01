@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Registration {% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/registration.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <form action="{% url 'registration' %}" method="post">
+        <div class="container">
+            <h1 style="font-size:200%;">Register</h1>
+            <p style="font-size:130%;">Please fill in this form to create an account.</p>
+            <hr>
+
+            {% csrf_token %}
+
+            {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label> {{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+
+            <input type="submit" value="Register" class="registerbtn">
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="{% url 'authorisation' %}">Sign in</a>.</p>
+        </div>
+    </form>
+
+{% endblock %}

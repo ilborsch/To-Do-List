@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="topnav">
+  <a class="active" href="{% url 'main_page' %}">Home</a>
+  <a href="{% url 'about_us' %}">Contact</a>
+  <div>
+      {% if request.user.is_authenticated %}
+          <a href="{% url 'user_profile' user_name=user.username %}">{{ user.username }}</a>
+          <a href="{% url 'logout' %}">Log out</a>
+      {% else %}
+          <a href="{% url 'registration' %}">Register</a>
+          <a href="{% url 'authorisation' %}">Login</a>
+      {% endif %}
+  </div>
+</div>
+{% endblock %}

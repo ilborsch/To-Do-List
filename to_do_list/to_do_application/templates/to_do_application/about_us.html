@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Us {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    {% include 'to_do_application/includes/nav_bar.html' %}
+<h1>About us</h1>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Authorisation {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/registration.css' %}">
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'authorisation' %}" method="post">
+        <div class="container">
+            <h1 style="font-size:200%;">Login</h1>
+            <p style="font-size:130%;">Please fill in this form to login into your existing account. <3</p>
+            <hr>
+
+            {% csrf_token %}
+
+            {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label> {{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+
+            <input type="submit" value="Login" class="registerbtn">
+        </div>
+
+        <div class="container signin">
+            <p>Wanna back? Just <a href="{% url 'main_page' %}">click here</a>.</p>
+        </div>
+    </form>
+
+
+{% endblock %}
