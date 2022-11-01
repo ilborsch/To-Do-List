@@ -40,7 +40,7 @@ def get_registration_page(request):
     else:
         form = UserRegistration()
     return render(request, 'to_do_application/registration.html', context={
-        'form': form,
+        'form': form
     })
 
 
