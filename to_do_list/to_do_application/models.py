@@ -9,8 +9,8 @@ from django.utils.text import slugify
 class UserModel(User):
 
     slug = models.SlugField()
-    profile_photo = models.ImageField(upload_to='img/', max_length=300,
-                                      null=True)
+    profile_photo = models.ImageField(upload_to='to_do_application/media/user_photos',
+                                      default='to_do_application/media/user_photos/profile-icon-9.png')
 
     def get_absolute_url(self):
         return reverse('user-profile', args=['slug'])

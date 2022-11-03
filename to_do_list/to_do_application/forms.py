@@ -54,4 +54,6 @@ class ProfileImageForm(forms.ModelForm):
     class Meta:
         model = UserModel
         fields = ['profile_photo']
+        widgets = {'profile-photo': forms.ClearableFileInput()}
+
 

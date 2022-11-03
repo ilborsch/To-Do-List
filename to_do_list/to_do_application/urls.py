@@ -1,3 +1,6 @@
+from django.conf.urls.static import static
+from django.conf import settings
+
 from . import views
 from django.urls import path
 
@@ -13,3 +16,5 @@ urlpatterns = [
     path('tasks/<str:user_name>/', views.get_user_tasks_page, name='tasks'),
     path('create_new_task/<str:user_name>/', views.create_new_task, name='create_new_task')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

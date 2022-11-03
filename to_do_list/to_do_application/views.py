@@ -51,12 +51,11 @@ def get_about_page(request):
 def get_user_profile_page(request, user_name: str):
     user = UserModel.objects.get(username=user_name)
     if request.method == "POST":
-        form = ProfileImageForm(request.POST, request.FILES)
+        form = ProfileImageForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
-            image = form.cleaned_data['image']
-            user = UserModel.objects.get(username=user_name)
+            image = form.cleaned_data['profile_photo']
             user.profile_photo = image
-            user.save()
+            form.save()
 
     else:
         form = ProfileImageForm()

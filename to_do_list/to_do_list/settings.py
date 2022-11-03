@@ -135,4 +135,5 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = '/'
 
-MEDIA_ROOT = os_path_join(BASE_DIR, 'static/img', "")
+MEDIA_ROOT = ""
+MEDIA_URL = ""
