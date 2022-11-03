@@ -6,14 +6,11 @@ from django.utils.text import slugify
 # Create your models here.
 
 
-class Task(models.Model):
-    is_completed = models.BooleanField(default=False)
-
-
 class UserModel(User):
 
-    tasks = models.ForeignKey(Task, on_delete=models.CASCADE, null=True)
     slug = models.SlugField()
+    profile_photo = models.ImageField(upload_to='img/', max_length=300,
+                                      null=True)
 
     def get_absolute_url(self):
         return reverse('user-profile', args=['slug'])
@@ -24,6 +21,17 @@ class UserModel(User):
 
     def __str__(self):
         return f"User: {self.username}"
+
+
+class Task(models.Model):
+    is_completed = models.BooleanField(default=False)
+    is_public = models.BooleanField(default=True)
+    title = models.CharField(max_length=60, default="")
+    description = models.CharField(max_length=250, default="")
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.title
 
 
 

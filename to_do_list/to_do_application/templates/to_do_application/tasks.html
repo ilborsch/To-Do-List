@@ -9,5 +9,26 @@
 
 {% block content %}
     {% include 'to_do_application/includes/nav_bar.html' %}
+    {% if user.is_authenticated %}
+        <br>
+        <br>
+        <br>
+        <h1><a href="{% url 'create_new_task' user_name=user.username %}">Create a new task.</a></h1>
+        <form method="post"></form>
+        {% for task in user.task_set.all %}
+            {% if task.is_public %}
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <a href="{% url 'tasks' task_id=task.id %}">Delete task</a>
+                <hr>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <br>
+        <br>
+        <br>
+    <h1>You are not authenticated, sorry.</h1>
+    <h2><a href="{% url 'registration' %}">Register</a> / <a href="{% url 'authorisation' %}">Login</a></h2>
 
+    {% endif %}
 {% endblock %}

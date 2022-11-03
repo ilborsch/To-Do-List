@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.core.exceptions import ValidationError
 from django import forms
 from django.contrib.auth.models import User
+from .models import UserModel
 
 
 class UserRegistration(UserCreationForm):
@@ -40,4 +41,17 @@ class UserLoginForm(AuthenticationForm):
     class Meta:
         model = User
         fields = ('username', 'password')
+
+
+class UserTasksForm(forms.Form):
+    title = forms.CharField(label="Title", widget=forms.TextInput())
+    description = forms.CharField(label="Description", widget=forms.TextInput())
+    is_public = forms.BooleanField(label="Public", widget=forms.CheckboxInput(),
+                                   required=False, initial=True)
+
+
+class ProfileImageForm(forms.ModelForm):
+    class Meta:
+        model = UserModel
+        fields = ['profile_photo']
 

@@ -1,8 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
-from .models import UserModel
+from .models import UserModel, Task
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, reverse
-from .forms import UserRegistration, UserLoginForm
+from .forms import UserRegistration, UserLoginForm, UserTasksForm, ProfileImageForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse, reverse_lazy
 
@@ -49,7 +49,21 @@ def get_about_page(request):
 
 
 def get_user_profile_page(request, user_name: str):
-    return render(request, 'to_do_application/user_profile.html')
+    user = UserModel.objects.get(username=user_name)
+    if request.method == "POST":
+        form = ProfileImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data['image']
+            user = UserModel.objects.get(username=user_name)
+            user.profile_photo = image
+            user.save()
+
+    else:
+        form = ProfileImageForm()
+    return render(request, 'to_do_application/user_profile.html', context={
+        'user': user,
+        'form': form,
+    })
 
 
 class UserLoginView(LoginView):
@@ -63,8 +77,36 @@ def logout_user(request):
     return render(request, 'to_do_application/logout.html')
 
 
-def get_user_tasks_page(request):
-    render(request, 'to_do_application/tasks.html')
+def get_user_tasks_page(request, user_name: str = None, task_id: int = None):
+    if task_id is not None:
+        task = Task.objects.get(id=task_id)
+        username = task.user.username
+        task.delete()
+        return HttpResponseRedirect(reverse('tasks', args=[username]))
+    else:
+        user = UserModel.objects.get(username=user_name)
+    return render(request, 'to_do_application/tasks.html', context={
+        'user': user,
+    })
+
+
+def create_new_task(request, user_name: str):
+    if request.method == 'POST':
+        form = UserTasksForm(request.POST)
+
+        if form.is_valid():
+            user = UserModel.objects.get(username=user_name)
+            new_task = Task(is_public=form.cleaned_data['is_public'],
+                            title=form.cleaned_data['title'],
+                            description=form.cleaned_data['description'],
+                            user=user)
+            new_task.save()
+            return HttpResponseRedirect(reverse('tasks', args=[user_name]))
+    else:
+        form = UserTasksForm()
+    return render(request, 'to_do_application/create_new_task.html', context={
+        'form': form,
+    })
 
 
 

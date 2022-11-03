@@ -12,6 +12,7 @@
   <a href="{% url 'about_us' %}">Contact</a>
   <div>
       {% if request.user.is_authenticated %}
+          <a href="{% url 'tasks' user_name=user.username %}">Tasks list</a>
           <a href="{% url 'user_profile' user_name=user.username %}">{{ user.username }}</a>
           <a href="{% url 'logout' %}">Log out</a>
       {% else %}
