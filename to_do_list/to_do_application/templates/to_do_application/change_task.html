@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Create new one {% endblock %}
+
+
+{% block content %}
+    {% include 'to_do_application/includes/nav_bar.html' %}
+    <br><br><br>
+    <h1>Change the task</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Save changes</button>
+    </form>
+{% endblock %}

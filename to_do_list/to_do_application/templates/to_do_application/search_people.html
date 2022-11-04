@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} To Do List {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+    <link rel="stylesheet" href="{% static 'to_do_application/css/main_page.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'to_do_application/includes/nav_bar.html' %}
+    <br><br><br><br>
+    {% if searched_value %}
+        <h1>You searched for - '{{ searched_value }}'.</h1>
+
+        {% if users %}
+            <h2>Result:</h2>
+            <ul>
+                {% for user in users %}
+                    <li><a href="{% url 'user_profile' user_name=user.username %}">{{ user.username }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h2>No results for your searched query, sorry. ;(</h2>
+        {% endif %}
+    {% else %}
+        <h1>You forgot to search for Bob...</h1>
+    {% endif %}
+
+{% endblock %}

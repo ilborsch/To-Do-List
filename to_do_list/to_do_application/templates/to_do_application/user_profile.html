@@ -23,5 +23,15 @@
         {{ form.as_p }}
         <button>Change profile photo</button>
     </form>
+    <h3>Competed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
+    <br>
+    <hr>
+    {% for task in user.task_set.all %}
+        {% if task.is_public %}
+            <h3>{{ task.title }}</h3>
+            <p>{{ task.description }}</p>
+            <hr>
+        {% endif %}
+    {% endfor %}
 
 {% endblock %}

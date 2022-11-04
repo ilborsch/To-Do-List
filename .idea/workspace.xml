@@ -7,14 +7,13 @@
     <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="Commit &lt;3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_list/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_list/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -43,15 +42,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/borsch/PycharmProjects/To_Do_List/to_do_list/to_do_application/media/user_photos",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/borsch/PycharmProjects/To_Do_List/to_do_list/to_do_application/media/user_photos&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/media/user_photos" />
@@ -124,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667451150462</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit &lt;3">
+      <created>1667476175200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667476175200</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -14,7 +14,10 @@ urlpatterns = [
     path('logout_successful/', views.logout_user, name='logout'),
     path('tasks/<int:task_id>/', views.get_user_tasks_page, name='tasks'),
     path('tasks/<str:user_name>/', views.get_user_tasks_page, name='tasks'),
-    path('create_new_task/<str:user_name>/', views.create_new_task, name='create_new_task')
+    path('create_new_task/<str:user_name>/', views.create_new_task, name='create_new_task'),
+    path('change_task/<str:user_name>/<int:task_id>/', views.get_change_task_page, name='change_task'),
+    path('completed_task/<str:user_name>/<int:task_id>/', views.get_completed_task, name='completed_task'),
+    path('search_for_people/', views.get_search_page, name='search_users')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

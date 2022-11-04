@@ -12,6 +12,7 @@ class UserModel(User):
     profile_photo = models.ImageField(upload_to='to_do_application/media/user_photos',
                                       default='to_do_application/media/user_photos/profile-icon-9.png')
 
+
     def get_absolute_url(self):
         return reverse('user-profile', args=['slug'])
 

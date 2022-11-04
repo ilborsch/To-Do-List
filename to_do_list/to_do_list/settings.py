@@ -137,3 +137,5 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_ROOT = ""
 MEDIA_URL = ""
+
+LOGIN_URL = '/login/'
