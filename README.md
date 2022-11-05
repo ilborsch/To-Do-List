@@ -33,7 +33,7 @@
 
 ## Developers
 
-- [Illia Borshch](https://github.com/ilborsch/T)
+- [Illia Borshch](https://github.com/ilborsch)
 
 ## License
 
