@@ -66,7 +66,8 @@ def get_user_profile_page(request, user_name: str):
     else:
         form = ProfileImageForm()
     return render(request, 'to_do_application/user_profile.html', context={
-        'user': user,
+        'profile_user': user,
+        'request_user': request.user,
         'form': form,
         'amount_tasks_completed': amount_tasks_completed['is_completed__count'],
         'amount_tasks': amount_tasks['id__count'],

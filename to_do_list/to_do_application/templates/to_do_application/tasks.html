@@ -16,9 +16,10 @@
         <h1><a href="{% url 'create_new_task' user_name=user.username %}">Create a new task.</a></h1>
         <form method="post"></form>
         {% for task in user.task_set.all %}
-                {% if task.is_public %}
+                {% if not task.is_completed %}
                     <h3>{{ task.title }}</h3>
                     <p>{{ task.description }}</p>
+
                     <form method="get">
                         <button formaction="{% url 'tasks' task_id=task.id %}">Delete</button>
                         <button formaction="{% url 'change_task' task_id=task.id user_name=user.username %}">Change</button>

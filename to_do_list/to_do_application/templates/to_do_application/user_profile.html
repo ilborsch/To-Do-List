@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} {{ user.username|capfirst }} profile {% endblock %}
+{% block title %} {{ profile_user.username|capfirst }} profile {% endblock %}
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
@@ -14,19 +14,22 @@
     <br>
     <br>
     <br>
-    <h1>User {{ user.username }} profile</h1>
+    <h1>User {{ profile_user.username }} profile</h1>
 
-        <img src="{{ user.profile_photo.url }}" alt="here must be image :(">
+        <img src="{{ profile_user.profile_photo.url }}" alt="here must be image :(">
 
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button>Change profile photo</button>
-    </form>
+    {% if request_user.username == profile_user.username %}
+
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Change profile photo</button>
+        </form>
+    {% endif %}
     <h3>Competed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
     <br>
     <hr>
-    {% for task in user.task_set.all %}
+    {% for task in profile_user.task_set.all %}
         {% if task.is_public %}
             <h3>{{ task.title }}</h3>
             <p>{{ task.description }}</p>
