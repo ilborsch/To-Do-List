@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="Last back-end changes.">
+    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="README.txt + LICENSE.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/static/img/img/shrek-forever-after-1587549453.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/change_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/change_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/create_new_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/create_new_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/is_completed_check_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/is_completed_check_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/borsch/PycharmProjects/To_Do_List/to_do_list/to_do_application/media/user_photos&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/borsch/PycharmProjects/To_Do_List",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/media/user_photos" />
@@ -145,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667656451827</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HTML changes">
+      <created>1667680190499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667680190500</updated>
+    </task>
+    <task id="LOCAL-00009" summary="README.txt + LICENSE.txt">
+      <created>1667680219810</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667680219810</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +172,8 @@
     <MESSAGE value="Commit &lt;3" />
     <MESSAGE value="Search form added + Task form changes" />
     <MESSAGE value="Last back-end changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Last back-end changes." />
+    <MESSAGE value="HTML changes" />
+    <MESSAGE value="README.txt + LICENSE.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.txt + LICENSE.txt" />
   </component>
 </project>
