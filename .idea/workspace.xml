@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="Search form added + Task form changes">
+    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="Last back-end changes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/static/img/img/shrek-forever-after-1587549453.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/change_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/change_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/create_new_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/create_new_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/is_completed_check_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/is_completed_check_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667591218165</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Last back-end changes.">
+      <created>1667656451827</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667656451827</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +163,7 @@
     <MESSAGE value="Login + Logout. Changed registration view" />
     <MESSAGE value="Commit &lt;3" />
     <MESSAGE value="Search form added + Task form changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search form added + Task form changes" />
+    <MESSAGE value="Last back-end changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Last back-end changes." />
   </component>
 </project>

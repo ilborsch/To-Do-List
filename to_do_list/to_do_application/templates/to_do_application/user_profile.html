@@ -26,7 +26,7 @@
             <button>Change profile photo</button>
         </form>
     {% endif %}
-    <h3>Competed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
+    <h3>Completed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
     <br>
     <hr>
     {% for task in profile_user.task_set.all %}

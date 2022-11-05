@@ -10,7 +10,6 @@
     <h1>Wow, u've already done the '{{ the_task.title }}'?</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
         <h2>Are you sure u completed this task?</h2>
         <button>Yes!</button>
     </form>

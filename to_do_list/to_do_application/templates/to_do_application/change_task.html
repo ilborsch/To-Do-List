@@ -10,7 +10,29 @@
     <h1>Change the task</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <p>
+            <label class="form-label" for="{{ form.title.id_for_label }}">
+                {{ form.title.label }}:
+            </label>
+            {{ form.title }}
+        </p>
+        <div class="form-error">{{ form.title.errors }}</div>
+
+        <p>
+            <label class="form-label" for="{{ form.description.id_for_label }}">
+                {{ form.description.label }}:
+            </label>
+            {{ form.description }}
+        </p>
+        <div class="form-error">{{ form.description.errors }}</div>
+
+        <p>
+            <label class="form-label" for="{{ form.is_public.id_for_label }}">
+                {{ form.is_public.label }}:
+            </label>
+            {{ form.is_public }}
+        </p>
+        <div class="form-error">{{ form.is_public.errors }}</div>
         <button>Save changes</button>
     </form>
 {% endblock %}
