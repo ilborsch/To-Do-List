@@ -32,7 +32,7 @@ def get_welcome_page(request):
 def get_registration_page(request):
     """
     registration.html OR user_profile.html render view.
-    In POST method case the function proceed Register form and send
+    In POST method case the function processes Register form and send
     the data into 'to_do_application_usermodel' TABLE.
     After, user get automatically authorised and logged into his account.
     Otherwise, form is unvalid or request.method == "GET" - renders registration.html.
@@ -75,7 +75,7 @@ def get_about_page(request):
 def get_user_profile_page(request, user_name: str):
     """
     user_profile.html render view.
-    In POST method case the function proceed ProfileImageForm and send
+    In POST method case the function processes ProfileImageForm and send
     the data into 'to_do_application_usermodel' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders user_profile.html.
     VARIABLES:
@@ -111,7 +111,7 @@ def get_user_profile_page(request, user_name: str):
 class UserLoginView(LoginView):
     """
     login.html render view.
-    In POST method case the view class proceed UserLoginForm and validate
+    In POST method case the view class processes UserLoginForm and validate
     the data in 'to_do_application_usermodel' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders login.html.
     VARIABLES:
@@ -139,7 +139,7 @@ def get_user_tasks_page(request, user_name: str = None, task_id: int = None):
     If Function gets the 'task_id' parameter it processes the data and deletes
     task with given task_id argument from 'to_do_application_task' TABLE.
     Otherwise, task_id is None instance - View function renders html template
-    without any data changing
+    without any data changing.
     VARIABLES:
         - user: UserModel instance.
     """
@@ -160,7 +160,7 @@ def get_user_tasks_page(request, user_name: str = None, task_id: int = None):
 def create_new_task(request, user_name: str):
     """
     create_new_task.html render view.
-    In POST method case the view class proceed UserTasksForm and creates new
+    In POST method case the view function processes UserTasksForm and creates new
     table instance in 'to_do_application_task' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders create_new_task.html.
     VARIABLES:
@@ -188,7 +188,7 @@ def create_new_task(request, user_name: str):
 def get_change_task_page(request, user_name: str, task_id: int):
     """
     change_task.html render view.
-    In POST method case the view class proceed UserTasksForm and does data update
+    In POST method case the view function processes UserTasksForm and makes data update
     query into 'to_do_application_task' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders change_task.html.
     VARIABLES:
@@ -221,7 +221,7 @@ def get_completed_task(request, user_name: str, task_id: int):
     """
     is_completed_check_page.html OR tasks.html render view.
     In POST method case the view function changes task's 'is_completed' and 'is_public'
-    fields update query into 'to_do_application_task' TABLE.
+    fields making update query into 'to_do_application_task' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders is_completed_check_page.html.
     VARIABLES:
         - form: UserTasksForm form .
@@ -241,8 +241,8 @@ def get_completed_task(request, user_name: str, task_id: int):
 def get_search_page(request):
     """
     search_people.html render view.
-    In POST method case the view class process search-users Form field and does SELECT query
-    into 'to_do_application_usermodel' TABLE.
+    In POST method case the view function processes search-users Form field and makes SELECT filter query
+    by 'username' and 'email' fields into 'to_do_application_usermodel' TABLE.
     Otherwise, form is unvalid or request.method == "GET" - renders search_people.html.
     VARIABLES:
         - searched_value: the text entered by user in Search Form ,
