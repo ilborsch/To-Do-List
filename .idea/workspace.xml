@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="LICENSE.txt + Admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/main_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/main_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/css/nav_bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/includes/nav_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/main_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/search_people.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/search_people.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,15 +45,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/borsch/PycharmProjects/To_Do_List",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/borsch/PycharmProjects/To_Do_List&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/media/user_photos" />

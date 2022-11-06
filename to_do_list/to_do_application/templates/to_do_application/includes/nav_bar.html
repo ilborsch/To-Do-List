@@ -4,6 +4,7 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+    <link rel="stylesheet" href="{% static 'to_do_application/css/search_people.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -12,7 +13,7 @@
     <a href="{% url 'about_us' %}">Contact</a>
     <form method="post" action="{% url 'search_users' %}">
         {% csrf_token %}
-        <input type="search" placeholder="Search People" aria-label="Search" name="search-users">
+        <input type="search" placeholder="Search Users" aria-label="Search" name="search-users">
         <button type="submit" class="search_button">Search</button>
     </form>
   <div>

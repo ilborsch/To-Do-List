@@ -32,6 +32,13 @@ img.sign {
     position: absolute;
     width: 50px;
     height: 50px;
-    top: 653px;
-    left: 691px;
+    margin-left: -61px;
+    margin-top: -3px;
+}
+
+img.b-man {
+    float: left;
+    margin: 0 0 5px 5px;
+    margin-top: -15%;
+    height: 400px;
 }

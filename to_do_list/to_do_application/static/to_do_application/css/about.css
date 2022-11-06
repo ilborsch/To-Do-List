@@ -1,0 +1,46 @@
+h1, h2 {
+    text-align: center;
+    background-color: #afcdb1
+
+}
+
+.start {
+    font-size: 34px;
+}
+
+.title {
+    font-size: 58px;
+    font-style: italic;
+}
+
+p {
+    font-size: 44px;
+    text-align: center;
+    background-color: #ccffcc;
+    border-radius: 25px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 1px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.links {
+    font-size: 60px
+}
+
+.emoji {
+    width: 35px;
+
+}

@@ -4,7 +4,7 @@
 {% block title %} {{ profile_user.username|capfirst }} profile {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'to_do_application/css/nav_bar.css' %}">
+    <link rel="stylesheet" href="{% static 'to_do_application/css/user_profile.css' %}">
 {% endblock %}
 
 
@@ -29,12 +29,20 @@
     <h3>Completed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
     <br>
     <hr>
-    {% for task in profile_user.task_set.all %}
-        {% if task.is_public %}
-            <h3>{{ task.title }}</h3>
-            <p>{{ task.description }}</p>
-            <hr>
-        {% endif %}
-    {% endfor %}
+        <ol class="square">
+            {% for task in profile_user.task_set.all %}
+                {% if task.is_public %}
+                    <li>
+                        <p class="title"><i>Title: </i>{{ task.title }}</p>
+                        <p class="description"><i>Description: </i>{{ task.description }}</p>
+                        <hr>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ol>
 
 {% endblock %}
+
+
+
+
