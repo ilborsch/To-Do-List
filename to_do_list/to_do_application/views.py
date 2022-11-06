@@ -10,19 +10,36 @@ from django.urls import reverse, reverse_lazy
 from django.db.models import Count, Q
 
 # Create your views here.
-main_page_text = ['Play and become better - Complete the planned tasks and gain the highest level!',
-                  'Be more successful than others.',
-                  'Or be more successful together.',
-                  'Your choice - your career.', ]
 
 
 def get_welcome_page(request):
+    """
+    main_page.html render view.
+    VARIABLES:
+        - points: text used in main_page.html (just more convenient here instead of html document lol)
+    """
+
+    main_page_text = ['Play and become better - Complete the planned tasks and gain the highest level!',
+                      'Be more successful than others.',
+                      'Or be more successful together.',
+                      'Your choice - your career.', ]
+
     return render(request, 'to_do_application/main_page.html', context={
         'points': main_page_text,
     })
 
 
 def get_registration_page(request):
+    """
+    registration.html OR user_profile.html render view.
+    In POST method case the function proceed Register form and send
+    the data into 'to_do_application_usermodel' TABLE.
+    After, user get automatically authorised and logged into his account.
+    Otherwise, form is unvalid or request.method == "GET" - renders registration.html.
+    VARIABLES:
+        - form: UserRegistration form .
+    """
+
     if request.method == 'POST':
         form = UserRegistration(request.POST)
         if form.is_valid():
@@ -48,14 +65,31 @@ def get_registration_page(request):
 
 
 def get_about_page(request):
+    """
+    about_us.html render view.
+    """
     return render(request, 'to_do_application/about_us.html')
 
 
 @login_required
 def get_user_profile_page(request, user_name: str):
+    """
+    user_profile.html render view.
+    In POST method case the function proceed ProfileImageForm and send
+    the data into 'to_do_application_usermodel' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders user_profile.html.
+    VARIABLES:
+        - form: ProfileImageForm form ,
+        - profile_user: User profile page owner ,
+        - request_user: User who made the GET request to the server ,
+        - amount_tasks_completed: Amount of completed tasks by 'profile_user' ,
+        - amount_tasks: Total 'profile_user' tasks amount .
+    """
+
     user = UserModel.objects.get(username=user_name)
     amount_tasks_completed = user.task_set.filter(is_completed=True).aggregate(Count('is_completed'))
     amount_tasks = user.task_set.aggregate(Count('id'))
+
     if request.method == "POST":
         form = ProfileImageForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
@@ -75,6 +109,14 @@ def get_user_profile_page(request, user_name: str):
 
 
 class UserLoginView(LoginView):
+    """
+    login.html render view.
+    In POST method case the view class proceed UserLoginForm and validate
+    the data in 'to_do_application_usermodel' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders login.html.
+    VARIABLES:
+        - form: UserLoginForm form .
+    """
     template_name = 'to_do_application/login.html'
     form_class = UserLoginForm
     success_url = reverse_lazy('main_page')
@@ -82,12 +124,26 @@ class UserLoginView(LoginView):
 
 @login_required
 def logout_user(request):
+    """
+    logout.html render view.
+    Does user log out after GET request method.
+    """
     logout(request)
     return render(request, 'to_do_application/logout.html')
 
 
 @login_required
 def get_user_tasks_page(request, user_name: str = None, task_id: int = None):
+    """
+    tasks.html render view.
+    If Function gets the 'task_id' parameter it processes the data and deletes
+    task with given task_id argument from 'to_do_application_task' TABLE.
+    Otherwise, task_id is None instance - View function renders html template
+    without any data changing
+    VARIABLES:
+        - user: UserModel instance.
+    """
+
     if task_id is not None:
         task = Task.objects.get(id=task_id)
         username = task.user.username
@@ -102,6 +158,14 @@ def get_user_tasks_page(request, user_name: str = None, task_id: int = None):
 
 @login_required()
 def create_new_task(request, user_name: str):
+    """
+    create_new_task.html render view.
+    In POST method case the view class proceed UserTasksForm and creates new
+    table instance in 'to_do_application_task' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders create_new_task.html.
+    VARIABLES:
+        - form: UserTasksForm form .
+    """
     if request.method == 'POST':
         form = UserTasksForm(request.POST)
 
@@ -122,6 +186,14 @@ def create_new_task(request, user_name: str):
 
 @login_required
 def get_change_task_page(request, user_name: str, task_id: int):
+    """
+    change_task.html render view.
+    In POST method case the view class proceed UserTasksForm and does data update
+    query into 'to_do_application_task' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders change_task.html.
+    VARIABLES:
+        - form: UserTasksForm form .
+    """
     task = Task.objects.get(id=task_id)
     if request.method == "POST":
         form = UserTasksForm(request.POST)
@@ -146,6 +218,14 @@ def get_change_task_page(request, user_name: str, task_id: int):
 
 @login_required
 def get_completed_task(request, user_name: str, task_id: int):
+    """
+    is_completed_check_page.html OR tasks.html render view.
+    In POST method case the view function changes task's 'is_completed' and 'is_public'
+    fields update query into 'to_do_application_task' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders is_completed_check_page.html.
+    VARIABLES:
+        - form: UserTasksForm form .
+    """
     task = Task.objects.get(id=task_id)
     if request.method == 'POST':
         task.is_completed = True
@@ -159,6 +239,15 @@ def get_completed_task(request, user_name: str, task_id: int):
 
 
 def get_search_page(request):
+    """
+    search_people.html render view.
+    In POST method case the view class process search-users Form field and does SELECT query
+    into 'to_do_application_usermodel' TABLE.
+    Otherwise, form is unvalid or request.method == "GET" - renders search_people.html.
+    VARIABLES:
+        - searched_value: the text entered by user in Search Form ,
+        - users: Filtered users from UserModel model by 'username' or 'email' fields.
+    """
     if request.method == 'POST':
         search = request.POST.get('search-users', "")
         users = UserModel.objects.filter(Q(username__contains=search) | Q(email__contains=search))

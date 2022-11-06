@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="README.txt + LICENSE.txt">
+    <list default="true" id="0217a559-619f-4550-b505-64d2dec9ba2a" name="Changes" comment="LICENSE.txt + Admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_list/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/to_do_application/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +54,9 @@
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/media/user_photos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/static/to_do_application/img" />
       <recent name="$PROJECT_DIR$/to_do_list/static/img" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/to_do_list/to_do_application/templates/to_do_application" />
       <recent name="$PROJECT_DIR$/to_do_list/static" />
     </key>
@@ -153,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667680219810</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="LICENSE.txt + Admin">
+      <created>1667687856050</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667687856050</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +184,7 @@
     <MESSAGE value="Last back-end changes." />
     <MESSAGE value="HTML changes" />
     <MESSAGE value="README.txt + LICENSE.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.txt + LICENSE.txt" />
+    <MESSAGE value="LICENSE.txt + Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="LICENSE.txt + Admin" />
   </component>
 </project>

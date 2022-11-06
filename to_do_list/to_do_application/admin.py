@@ -4,6 +4,12 @@ from .models import UserModel, Task
 
 @admin.register(UserModel)
 class UserModelAdmin(admin.ModelAdmin):
+    """
+    .models.UserModel ADMIN PANEL.
+    CHANGE FIELDS == 'email', 'profile_photo'.
+    READONLY FIELDS == 'username'.
+    """
+
     list_display = ('username', 'email', 'profile_photo')
     empty_value_display = 'unknown'
     ordering = ['username', 'email']
@@ -12,6 +18,12 @@ class UserModelAdmin(admin.ModelAdmin):
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
+    """
+    .models.Task ADMIN PANEL.
+    CHANGE FIELDS == 'title', 'description'.
+    READONLY FIELDS == 'user', 'is_completed', 'is_public'.
+    """
+
     list_display = ('user', 'title', 'description', 'is_completed', 'is_public')
     empty_value_display = 'unknown'
     ordering = ['user', 'title', 'description']

@@ -7,6 +7,13 @@ from django.utils.text import slugify
 
 
 class UserModel(User):
+    """
+    'to_do_application_usermodel' TABLE.
+    COLUMNS:
+        - user_ptr_id ,
+        - slug ,
+        - profile_photo .
+    """
 
     slug = models.SlugField()
     profile_photo = models.ImageField(upload_to='to_do_application/media/user_photos',
@@ -14,6 +21,9 @@ class UserModel(User):
 
 
     def get_absolute_url(self):
+        """
+        :return: The function returns absolute url path for the model instance's profile page.
+        """
         return reverse('user-profile', args=['slug'])
 
     def save(self, *args, **kwargs):
@@ -25,6 +35,15 @@ class UserModel(User):
 
 
 class Task(models.Model):
+    """
+    'to_do_application_task' TABLE.
+    COLUMNS:
+        - is_completed ,
+        - description ,
+        - is_public ,
+        - title ,
+        - user_id .
+    """
     is_completed = models.BooleanField(default=False)
     is_public = models.BooleanField(default=True)
     title = models.CharField(max_length=60, default="")
