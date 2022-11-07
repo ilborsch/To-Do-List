@@ -133,9 +133,22 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+]
+
 LOGIN_REDIRECT_URL = '/'
 
 MEDIA_ROOT = ""
 MEDIA_URL = ""
 
 LOGIN_URL = '/login/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = 'ilborschh@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOT_PASSWORD = 'iuntvybqbddjtjph'

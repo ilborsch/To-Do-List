@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import SetPasswordForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.core.exceptions import ValidationError
 from django import forms
@@ -82,7 +82,7 @@ class UserTasksForm(forms.Form):
                                    required=False, initial=True)
 
 
-class ProfileImageForm(forms.ModelForm):
+class ProfileImageForm(forms.Form):
     """
     User Profile avatar image form used in get_user_profile_page() view from .views .
     Generates form for user_profile.html templates.
@@ -95,4 +95,15 @@ class ProfileImageForm(forms.ModelForm):
         fields = ['profile_photo']
         widgets = {'profile-photo': forms.ClearableFileInput()}
 
+
+class ChangeUserPasswordForm(forms.Form):
+
+    old_password = forms.CharField(label='Password', max_length=24, min_length=4,
+                                   widget=forms.PasswordInput(attrs={'class': 'psswrd-input'}))
+
+    new_password1 = forms.CharField(label='Password confirmation', max_length=24, min_length=4,
+                                    widget=forms.PasswordInput(attrs={'class': 'psswrd-input'}))
+
+    new_password2 = forms.CharField(label='Password confirmation', max_length=24, min_length=4,
+                                    widget=forms.PasswordInput(attrs={'class': 'psswrd-input'}))
 

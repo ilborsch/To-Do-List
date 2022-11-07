@@ -1,10 +1,10 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.hashers import check_password
 from .models import UserModel, Task
 from django.contrib.auth.views import LoginView
-from django.shortcuts import render, reverse
-from .forms import UserRegistration, UserLoginForm, UserTasksForm, ProfileImageForm
+from django.shortcuts import render, reverse, redirect
+from .forms import UserRegistration, UserLoginForm, UserTasksForm, ProfileImageForm, ChangeUserPasswordForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.db.models import Count, Q
@@ -256,3 +256,24 @@ def get_search_page(request):
             'users': users,
         })
     return render(request, 'to_do_application/search_people.html', context={})
+
+
+def get_change_user_password_page(request, user_name: str):
+    user = UserModel.objects.get(username__exact=user_name)
+    if request.method == "POST":
+        form = ChangeUserPasswordForm(request.POST)
+
+        if form.is_valid():
+            old_password = form.cleaned_data.get("old_password")
+            new_password1 = form.cleaned_data.get("new_password1")
+            new_password2 = form.cleaned_data.get("new_password2")
+
+            if user.check_password(old_password) and new_password2 == new_password1:
+                user.set_password(new_password1)
+                user.save()
+                return redirect('user_profile', user_name=user_name)
+    else:
+        form = ChangeUserPasswordForm()
+    return render(request, 'to_do_application/change_password.html', context={
+        'form': form,
+    })

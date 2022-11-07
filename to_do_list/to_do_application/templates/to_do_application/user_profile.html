@@ -16,7 +16,7 @@
     <br>
     <h1>User {{ profile_user.username }} profile</h1>
 
-        <img src="{{ profile_user.profile_photo.url }}" alt="here must be image :(">
+        <img src="{{ profile_user.profile_photo.url }}" alt="here must be image :(" class="avatar">
 
     {% if request_user.username == profile_user.username %}
 
@@ -24,6 +24,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button>Change profile photo</button>
+            <p><a href="{% url 'change_password' user.username %}">Change password</a></p>
         </form>
     {% endif %}
     <h3>Completed tasks: {{ amount_tasks_completed }} / {{ amount_tasks }}</h3>
