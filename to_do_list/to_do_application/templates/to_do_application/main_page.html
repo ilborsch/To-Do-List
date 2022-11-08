@@ -22,7 +22,7 @@
     <p>{{ point }}</p>
     {% endfor %}
     {% if user.is_authenticated %}
-        <p class="start_now"><a href="{% url 'main_page' %}"><img class="sign" src="{% static 'to_do_application/img/3.png' %}" alt="here must be image :(" > Continue your path!</a></p>
+        <p class="start_now"><a href="{% url 'user_profile' user.username %}"><img class="sign" src="{% static 'to_do_application/img/3.png' %}" alt="here must be image :(" > Continue your path!</a></p>
     {% else %}
         <p class="start_now"><a href="{% url 'registration' %}"> <img class="sign" src="{% static 'to_do_application/img/3.png' %}" alt="here must be image :("> Start now!</a></p>
     {% endif %}
